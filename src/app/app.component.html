@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: orange;">
+	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="navbar-collapse collapse" id="navbarSupportedContent">
+		<a class="navbar-brand ml-auto mr-auto" routerLink="/home">
+			<strong>Hive Interact</strong>
+		</a>
+
+		<ul class="navbar-nav">
+			<li class="" *ngIf="dataService.uport.name != null">
+				<label class="btn btn-cp">{{dataService.uport.name}}</label>
+			</li>
+			<li style="position: relative; top -5px;" *ngIf="dataService.uport.avatar != null">
+				<img style="border-radius: 20px;" src="{{dataService.uport.avatar}}" height="50" width="50" />
+			</li>
+
+			<li class="" *ngIf="dataService.user.loggedIn">
+				<a href="#" class="btn info-btn btn-cp mr-2" routerLink="new">New Question</a>
+			</li>
+			<li class="" *ngIf="dataService.user.loggedIn">
+				<a href="#" class="btn info-btn btn-cp mr-2" routerLink="profile">Your Questions</a>
+			</li>
+			<li class="" *ngIf="dataService.user.loggedIn">
+				<button class="btn info-btn btn-cp mr-2 clickme" (click)="logOut()">Log Out</button>
+			</li>
+			<li class="" *ngIf="!dataService.user.loggedIn">
+				<a href="#" class="btn info-btn btn-cp" routerLink="register">Log In</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+<div class="container-fluid base">
+	<router-outlet></router-outlet>
+</div>
+
+<div *ngIf="dataService.networkLoading == true" class="loadingOverlay"></div>
+
+<footer class="footer fixed-bottom">
+	<div class="container-fluid" style="background-color: #dedede;">
+		<div class="row footer-row" style="">
+			<div class="col text-center">
+				<span>Made with <3 using ColonyJS</span>
+			</div>
+		</div>
+	</div>
+</footer>

@@ -1,0 +1,64 @@
+
+<div class="container">
+
+<div class="row mt-5" *ngIf="state == 1">  
+	<div class="col-md-3">
+		<h3>Domains:</h3>
+	</div>
+	<div class="col-md-7">
+		<div class="domain-list text-center">
+			<ul class="domain-list-row bg-orange" *ngFor="let idx of domainLoop()">
+				<a href="#" class="black" routerLink="/colony/{{colonyName}}/{{colonyToDomainMapping[colonyName][idx].slug}}">
+					<li class="domain-list-title">{{colonyToDomainMapping[colonyName][idx].name}}</li>
+				</a>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div *ngIf="state == 2">
+
+	<div class="row mt-2">
+		<div class="col mt-2">
+			<a class="btn bg-orange" href="#" routerLink="/colony/{{colonyName}}">&lt; Back</a>
+		</div>
+	</div>
+
+	<div class="row mt-3">
+		<div class="col">
+			<h3 class="text-center">Open Questions</h3>
+				<div class="">
+					<div class="wrap-table100">
+						<div class="table">
+							<div class="row header">
+								<div class="cell">
+									Question Name
+								</div>
+								<div class="cell">
+									Points
+								</div>
+								<div class="cell">
+									Time Remaining
+								</div>
+							</div>
+
+							<div class="row" *ngFor="let task of getTasks(1)">
+								<div class="cell">
+									<a href="#" routerLink="/colony/{{colonyName}}/{{domainName}}/question//{{task.id}}">{{task.details.title}}</a>
+								</div>
+								<div class="cell">
+									31
+								</div>
+								<div class="cell">
+									5 days
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+
+	</div>
+</div>
+
+</div>
