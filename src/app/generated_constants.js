@@ -31,43 +31,7 @@ module.exports = {
         "slug": "misc"
       }
     },
-    "ds": {
-      "2": {
-        "name": "Lists",
-        "slug": "lists"
-      },
-      "3": {
-        "name": "Arrays",
-        "slug": "arrays"
-      },
-      "4": {
-        "name": "Stacks/Queues",
-        "slug": "stacks-queues"
-      },
-      "5": {
-        "name": "Trees",
-        "slug": "trees"
-      },
-      "6": {
-        "name": "Hash/Maps",
-        "slug": "hash-maps"
-      },
-      "7": {
-        "name": "Graphs",
-        "slug": "graphs"
-      }
-    },
-    "misc": {
-      "2": {
-        "name": "Maths",
-        "slug": "maths"
-      },
-      "3": {
-        "name": "SQL",
-        "slug": "sql"
-      }
-    }
-  },
+    ,
   "domainNameToIdMapping": {
     "hive": {
       "search": 2,

@@ -49,7 +49,7 @@
 
 	<div class="row mt-2" *ngIf="dataService.user.loggedIn == false">
 		<div class="col text-center">
-			<span>You must be logged in to apply for or evaluate questions.</span>
+			<span>You must be logged in.</span>
 		</div>
 	</div>
 
@@ -97,7 +97,7 @@
 				</div>
 			</div>
 			<div class="modal-body" *ngIf="modal.apply.solveSuccess">
-				<h5 class="text-center">You have been assigned this question <strong>successfully</strong>! Please submit the link to your successful code (including a comment stating your address and this taskID) by the deadline.</h5>
+				<h5 class="text-center">You have been assigned this task <strong>successfully</strong>! Please submit the link to your successful code (including a comment stating your address and this taskID) by the deadline.</h5>
 			</div>
 			<div class="modal-body" *ngIf="modal.apply.evaluateSuccess">
 				<h5 class="text-center">You have been assigned this evaluation <strong>successfully</strong>! Please check the linked answer for correctness and assign a rating of 1-3 (1 - unfinished code attempt, 2 - correct answer fulfilling basic testcases, 3 - correct answer fulfilling all testcases). Also verify a comment stating the worker's address and taskID exists in the source code.</h5>

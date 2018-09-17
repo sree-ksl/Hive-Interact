@@ -18,7 +18,7 @@
 	<div *ngIf="state == 1">
 		<div class="row">
 			<div class="col text-center">
-				<h2>Create New Question</h2>
+				<h2>Create New</h2>
 			</div>
 		</div>
 
@@ -27,7 +27,7 @@
 				<span class="input input--juro" [ngClass]="{'input--filled': task.title.length > 0}">
 					<input [(ngModel)]="task.title" class="input__field input__field--juro" type="text" id="input-tasktitle" />
 					<label class="input__label input__label--juro" for="input-tasktitle">
-						<span class="input__label-content input__label-content--juro">Question Name</span>
+						<span class="input__label-content input__label-content--juro"> Name</span>
 					</label>
 				</span>
 			</div>
@@ -38,7 +38,7 @@
 				<span class="input input--juro" [ngClass]="{'input--filled': task.description.length > 0}">
 					<input [(ngModel)]="task.description" class="input__field input__field--juro" type="text" id="input-taskdesc" />
 					<label class="input__label input__label--juro" for="input-taskdesc">
-						<span class="input__label-content input__label-content--juro">Question Description</span>
+						<span class="input__label-content input__label-content--juro"> Description</span>
 					</label>
 				</span>
 			</div>
@@ -52,9 +52,9 @@
 				</select>
 			</div>
 			<div class="col text-center" *ngIf="domains[task.colony] != null">
-				<label>Choose Question Domain:</label>
+				<label>Choose Task :</label>
 				<select [(ngModel)]="task.domain" class="custom-select mr-2" name="selectDomain">
-					<option *ngFor="let domain of domains[task.colony]" value="{{domain}}">{{domain}}</option>
+					<option *ngFor="let domain of domains[task.colony]" value="{{domain}}">{{task}}</option>
 				</select>
 			</div>
 		</div>
@@ -69,7 +69,7 @@
 	<div *ngIf="state == 2">
 		<div class="row mt-1">
 			<div class="col text-center">
-				<h3>Question successfully created! </h3>
+				<h3> Successfully created! </h3>
 			</div>
 		</div>
 
@@ -83,7 +83,7 @@
 	<div *ngIf="state == 3">
 		<div class="row mt-1">
 			<div class="col text-center">
-				<h3>Error in creating question: {{task.error}}</h3>
+				<h3>Error in creating task: {{task.error}}</h3>
 			</div>
 		</div>
 
